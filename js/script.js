@@ -33,8 +33,8 @@ $(document).ready(function () {
       var ricerca = $(".cerca-utente").val();
       console.log(ricerca);
       numeroElementi = $(".wrap-menu-utenti li").length
-      for (var i = 0; i < numeroElementi; i++) {
-        numeroElementi[i]
+      for (var i = 0; i < $(".wrap-menu-utenti li").length; i++) {
+        console.log($(".lista-utenti li").attr("data-element"));
       }
     }
   });
