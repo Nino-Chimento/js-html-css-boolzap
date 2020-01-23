@@ -26,15 +26,19 @@ $(document).ready(function () {
     }, 1000);
   });
   // cerca utente
-  $(".cerca-utente").keypress(function () {
-    if(event.which == 13 || event.keyCode == 13) {
-      console.log("n")
-    }
-  });
+  // $(".cerca-utente").keypress(function () {
+  //   if(event.which == 13 || event.keyCode == 13) {
+  //     console.log("n")
+  //   }
+  // });
   // cancellazione messaggi
+  $(document).on("click",".fa-angle-down",function () {
+    console.log("N");
+    $(this).next().toggleClass("display-none");
+  })
   $(".fa-angle-down").click(function () {
-    $(this).next().toggleClass("display-none")
-    // $(".menu-cancellazione").toggleClass("display-none");
+    $(this).next().toggleClass("display-none");
+
   });
 
   });
