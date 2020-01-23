@@ -26,6 +26,7 @@ $(document).ready(function () {
     }, 1000);
   });
   $(".fa-angle-down").click(function () {
-    $(".menu-cancellazione").toggleClass("display-none");
+    $(this).next().toggleClass("display-none")
+    // $(".menu-cancellazione").toggleClass("display-none");
   });
 });
