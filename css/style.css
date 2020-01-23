@@ -3,6 +3,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
+  background-color: #D7DBD6;
 }
 * {
   margin: 0;
