@@ -148,6 +148,7 @@ img{
   background-image: url(../img/8fbacbd464e996966eb9d4a6b7a9c21e--sultan.jpg);
   position: relative;
   flex-direction: column;
+  overflow-y: scroll;
 }
 .contenitore-messaggio-inviato {
   width: 90%;
