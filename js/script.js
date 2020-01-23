@@ -26,20 +26,22 @@ $(document).ready(function () {
     }, 1000);
   });
   // cerca utente
-  // $(".cerca-utente").keypress(function () {
-  //   if(event.which == 13 || event.keyCode == 13) {
-  //     console.log("n")
-  //   }
-  // });
-  // cancellazione messaggi
-  $(document).on("click",".fa-angle-down",function () {
-    console.log("N");
-    $(this).next().toggleClass("display-none");
-  })
-  $(".fa-angle-down").click(function () {
-    $(this).next().toggleClass("display-none");
-
+  $(".cerca-utente").keypress(function () {
+    if(event.which == 13 || event.keyCode == 13) {
+      var ricerca = $(".cerca-utente").val();
+      console.log(ricerca);
+      numeroElementi = $(".wrap-menu-utenti li").length
+      for (var i = 0; i < numeroElementi; i++) {
+        numeroElementi[i]
+      }
+    }
   });
+
+  // cancellazione messaggi
+  $(".fa-angle-down").click(function () {
+    $(this).next().toggleClass("display-none")
+  });
+
 
   });
   $(".delete").click(function () {
