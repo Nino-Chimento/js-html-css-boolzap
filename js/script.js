@@ -29,4 +29,8 @@ $(document).ready(function () {
     $(this).next().toggleClass("display-none")
     // $(".menu-cancellazione").toggleClass("display-none");
   });
+
+  });
+  $(".delete").click(function () {
+    console.log("n");
 });
