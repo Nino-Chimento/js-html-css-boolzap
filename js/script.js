@@ -13,4 +13,16 @@ $(document).ready(function () {
         }, 1000);
       }
     })
-  })
+  $(".fa-telegram-plane").click(function () {
+    var testo = $("#invio").val();
+    console.log(testo);
+    var nuovoElemento = $(".copia").clone();
+    nuovoElemento.find("p").text(testo);
+    $(".conversazione").append(nuovoElemento);
+    setTimeout(function () {
+      var messaggioRicevuto = $(".messaggio-ricevuto").clone();
+      messaggioRicevuto.children("p").text("ok");
+      $(".conversazione").append(messaggioRicevuto);
+    }, 1000);
+  });
+});
