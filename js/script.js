@@ -25,4 +25,7 @@ $(document).ready(function () {
       $(".conversazione").append(messaggioRicevuto);
     }, 1000);
   });
+  $(".fa-angle-down").click(function () {
+    $(".menu-cancellazione").toggleClass("display-none");
+  });
 });
