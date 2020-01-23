@@ -160,6 +160,7 @@ img{
   border-radius: 10px;
   padding: 10px;
   position: relative;
+  text-align: center;
 }
 .messaggio-inviato span {
   position: absolute;
@@ -172,6 +173,14 @@ img{
 }
 .messaggio-inviato:hover span {
   display: block;
+}
+.messaggio-ricevuto {
+  background-color: white;
+  border-radius: 10px;
+  width: 30%;
+  margin-left:10%;
+  text-align: center;
+  padding: 10px;
 }
 /* }scrittura messaggi */
 .scrittura-messaggi {
