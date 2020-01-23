@@ -87,7 +87,7 @@ img{
   width: 90%;
   margin: auto;
   border: 1px solid lightgrey;
-  box-shadow: rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px;
 }
 .wrap-menu-utenti {
   width: 100%;
@@ -118,4 +118,19 @@ img{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
   display: none;
+}
+/* lista utenti */
+/* wrap messaggi */
+.header-conversazioni{
+  width: 100%;
+  height: 80px;
+  background-color: #EAEAEA;
+  border-left:1px solid black;
+  align-items: center;
+  justify-content: space-between;
+}
+.icons-header-comversazioni i {
+  color: lightgrey;
+  padding: 0 5px;
+  font-size: 1.2em;
 }
