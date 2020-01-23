@@ -32,5 +32,6 @@ $(document).ready(function () {
 
   });
   $(".delete").click(function () {
-    console.log("n");
+    console.log("N");
+    $(this).parents(".contenitore-messaggio-inviato").remove();
 });
