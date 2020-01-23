@@ -31,8 +31,8 @@ img{
 .wrap-conversazioni {
   width: 70%;
   height: 100%;
-  background-color: blue;
 }
+
 .header-utenti {
   height: 80px;
   width: 100%;
@@ -133,4 +133,9 @@ img{
   color: lightgrey;
   padding: 0 5px;
   font-size: 1.2em;
+}
+.conversazione {
+  width: 98%;
+  height:calc(100% - 160px);
+  background-image: url(../img/8fbacbd464e996966eb9d4a6b7a9c21e--sultan.jpg);
 }
