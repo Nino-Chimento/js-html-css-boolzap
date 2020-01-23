@@ -100,6 +100,7 @@ img{
 .lista-utenti {
   list-style: none;
   width: 90%;
+  height: calc(100% - 160px);
   margin: auto;
   background-color: white;
   overflow-y: scroll;
