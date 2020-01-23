@@ -5,6 +5,7 @@ $(document).ready(function () {
         console.log(testo);
         var nuovoElemento = $(".copia").clone();
         nuovoElemento.find("p").text(testo);
+        $("#invio").val("");
         $(".conversazione").append(nuovoElemento);
         setTimeout(function () {
           var messaggioRicevuto = $(".messaggio-ricevuto").clone();
@@ -19,6 +20,7 @@ $(document).ready(function () {
     var nuovoElemento = $(".copia").clone();
     nuovoElemento.find("p").text(testo);
     $(".conversazione").append(nuovoElemento);
+    $("#invio").val("");
     setTimeout(function () {
       var messaggioRicevuto = $(".messaggio-ricevuto").clone();
       messaggioRicevuto.children("p").text("ok");
