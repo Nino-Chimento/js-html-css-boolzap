@@ -1,11 +1,13 @@
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .flex {
   display: flex;
@@ -60,8 +62,7 @@ img{
   font-size: 1.5em;
   padding-left: 10px;
 }
-h4 {height: 5px;
-}
+
 /* /HEADER UTENTI */
 /* search */
 .div-search {
@@ -90,7 +91,8 @@ h4 {height: 5px;
 }
 .lista-utenti {
   list-style: none;
-
+  width: 90%;
+  margin: auto;
 }
 .lista-utenti li {
   display: flex;
@@ -100,7 +102,9 @@ h4 {height: 5px;
   width: 100%;
   position: relative;
   margin-left: 0;
-  border: 1px solid lightgrey
+  border: 1px solid lightgrey;
+
+
 }
 .opacity {
   position: absolute;
