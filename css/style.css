@@ -13,6 +13,9 @@ body {
 .flex {
   display: flex;
 }
+.display-none {
+  display: none
+}
 img{
   height: 40px;
   border-radius: 100%;
