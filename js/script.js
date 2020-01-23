@@ -40,13 +40,21 @@ $(document).ready(function () {
   });
 
   // cancellazione messaggi
+  $(document).on("click",".fa-angle-down",function () {
+      $(this).next().toggleClass("display-none");
+      $(".delete").click(function () {
+        $(this).parent("contenitore-messaggio-inviato").remove();
+      });
+    console.log("ni");
+  })
   $(".fa-angle-down").click(function () {
-    $(this).next().toggleClass("display-none")
+    $(this).next().toggleClass("display-none");
+    $(".delete").click(function () {
+      console.log("N");
+      $(this).parents(".contenitore-messaggio-inviato").remove();
   });
 
 
   });
-  $(".delete").click(function () {
-    console.log("N");
-    $(this).parents(".contenitore-messaggio-inviato").remove();
+
 });
