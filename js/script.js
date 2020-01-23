@@ -1,3 +1,7 @@
 $(document).ready(function () {
-  alert("n")
-});
+  $("input").keypress(function () {
+    if(event.which == 13 || event.keyCode == 13){
+      console.log("n");
+    }
+  })
+})
