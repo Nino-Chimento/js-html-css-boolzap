@@ -100,6 +100,7 @@ img{
   list-style: none;
   width: 90%;
   margin: auto;
+  background-color: white;
 }
 
 .lista-utenti li {
@@ -143,7 +144,26 @@ img{
   width: 98%;
   height:calc(100% - 160px);
   background-image: url(../img/8fbacbd464e996966eb9d4a6b7a9c21e--sultan.jpg);
+  position: relative;
+  flex-direction: column;
 }
+.contenitore-messaggio {
+  width: 90%;
+  margin:auto;
+  justify-content: flex-end;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 5px;
+}
+.messaggio-inviato {
+  background-color: #D5F9BA;
+  border-radius: 10px;
+  position: relative;
+  bottom:  0;
+  width: 50%;
+}
+
+/* }scrittura messaggi */
 .scrittura-messaggi {
   background-color: #F3EEEA;
   align-items: center;
