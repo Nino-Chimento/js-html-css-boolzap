@@ -32,6 +32,7 @@ img{
 .wrap-conversazioni {
   width: 70%;
   height: 100%;
+  background-color: white;
 }
 
 .header-utenti {
@@ -110,9 +111,12 @@ img{
   position: relative;
   margin-left: 0;
   border: 1px solid lightgrey;
-
-
 }
+.lista-utenti li:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .opacity {
   position: absolute;
   width: 100%;
@@ -139,4 +143,23 @@ img{
   width: 98%;
   height:calc(100% - 160px);
   background-image: url(../img/8fbacbd464e996966eb9d4a6b7a9c21e--sultan.jpg);
+}
+.scrittura-messaggi {
+  background-color: #F3EEEA;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 80px;
+}
+.scrittura-messaggi  input {
+  border: 2px solid #8EDAFC;
+  width: 80%;
+  height: 80%;
+}
+.scrittura-messaggi i {
+  color: lightgrey;
+  font-size: 1.8em;
+}
+.scrittura-messaggi i:hover {
+  cursor: pointer;
 }
