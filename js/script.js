@@ -28,14 +28,16 @@ $(document).ready(function () {
   // cerca utente
   $(".cerca-utente").keypress(function () {
     if(event.which == 13 || event.keyCode == 13) {
-      console.log("n")
+      console.log("n");
+      var ricerca = $(".cerca-utente").val();
+      console.log(ricerca);
     }
   });
   // cancellazione messaggi
   $(".fa-angle-down").click(function () {
     $(this).next().toggleClass("display-none")
-    // $(".menu-cancellazione").toggleClass("display-none");
   });
+
 
   });
   $(".delete").click(function () {
