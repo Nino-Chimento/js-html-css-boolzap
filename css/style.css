@@ -147,22 +147,32 @@ img{
   position: relative;
   flex-direction: column;
 }
-.contenitore-messaggio {
+.contenitore-messaggio-inviato {
   width: 90%;
   margin:auto;
   justify-content: flex-end;
   display: flex;
   align-items: flex-end;
-  padding: 0 5px;
+  margin: 10px 0;
 }
 .messaggio-inviato {
   background-color: #D5F9BA;
   border-radius: 10px;
+  padding: 10px;
   position: relative;
-  bottom:  0;
-  width: 50%;
 }
-
+.messaggio-inviato span {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  display: none;
+}
+.messaggio-inviato:hover {
+  cursor: pointer;
+}
+.messaggio-inviato:hover span {
+  display: block;
+}
 /* }scrittura messaggi */
 .scrittura-messaggi {
   background-color: #F3EEEA;
