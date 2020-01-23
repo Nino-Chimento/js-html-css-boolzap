@@ -6,6 +6,11 @@ $(document).ready(function () {
         var nuovoElemento = $(".copia").clone();
         nuovoElemento.find("p").text(testo);
         $(".conversazione").append(nuovoElemento);
+        setTimeout(function () {
+          var messaggioRicevuto = $(".messaggio-ricevuto").clone();
+          messaggioRicevuto.children("p").text("ok");
+          $(".conversazione").append(messaggioRicevuto);
+        }, 1000);
       }
     })
   })
