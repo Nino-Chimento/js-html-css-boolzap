@@ -32,10 +32,11 @@ img{
   background-color: blue;
 }
 .header-utenti {
-  height: 10%;
+  height: 80px;
   width: 100%;
   justify-content:space-between;
   align-items: center;
+  background-color: #EAEAEA;
 }
 .header-utenti img {
   padding-left: 10px;
@@ -44,4 +45,37 @@ img{
   color: lightgrey;
   font-size: 1.2em;
   padding: 0 5px;
+
+}
+/* header menu utenti */
+/* notifiche */
+.notifiche-header-utenti {
+  width: 100%;
+  height: 80px;
+  background-color: #8EDAFC;
+  align-items: center;
+}
+.notifiche-header-utenti i {
+  color: white;
+  font-size: 1.5em;
+  padding-left: 10px;
+}
+h4 {height: 5px;
+}
+/* /HEADER UTENTI */
+.div-search {
+  height: 60px;
+  width: 100%;
+  position: relative;
+  margin: 5px 5px;
+}
+ .div-search i {
+   position: absolute;
+   color: lightgrey;
+   top:5px;
+   left: 5px;
+ }
+.cerca-utente {
+  width: 95%;
+  margin: auto;
 }
