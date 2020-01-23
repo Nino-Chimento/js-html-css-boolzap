@@ -11,6 +11,15 @@ body {
   width: 80%;
   height: 95%;
   margin: auto;
-  background-color: red;
-
+  display: flex;
+}
+.wrap-utenti{
+  width: 30%;
+  height: 100%;
+  background-color: green;
+}
+.wrap-conversazioni {
+  width: 70%;
+  height: 100%;
+  background-color: blue;
 }
