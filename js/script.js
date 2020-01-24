@@ -31,7 +31,6 @@ $(document).ready(function () {
         var riga = $(".wrap-menu-utenti li");
         for (var i = 0; i < riga.length; i++) {
           var name = $(".wrap-menu-utenti").find("h4").eq(i).text();
-          // console.log(name);
           if (name.includes(datoRicerca)) {
             riga.eq(i).show();
           }
@@ -69,4 +68,6 @@ $(document).ready(function () {
     $(document).on("click",".delete",function () {
       $(this).parents(".contenitore-messaggio-inviato").remove();
     })
+
   });
+          
