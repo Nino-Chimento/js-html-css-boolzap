@@ -72,7 +72,7 @@ $(document).ready(function () {
       var posizione =$(this).attr("data-element")-1;
       var chatActive = $(".active");
       chatActive.removeClass("active");
-      $(".conversazione").eq(posizione).addClass("active")
+      $(".conversazione").eq(posizione).addClass("active");
     });
 
   });
