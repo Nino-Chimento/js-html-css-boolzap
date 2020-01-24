@@ -27,4 +27,8 @@ $(document).ready(function () {
       $(".conversazione").append(messaggioRicevuto);
     }, 1000);
   });
+  $(".fa-angle-down").click(function () {
+    console.log("n");
+    $(this).next().toggleClass("display-none");
+  });
 });
