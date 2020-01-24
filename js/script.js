@@ -28,7 +28,8 @@ $(document).ready(function () {
     $(".cerca-utente").keypress(function () {
       if(event.which == 13 || event.keyCode == 13){
         var datoRicerca = $(".cerca-utente").val();
-        console.log(datoRicerca);
+        var riga = $(".wrap-menu-utenti li");
+        console.log(riga.length);
       }
     });
     // cancellazione messaggi
