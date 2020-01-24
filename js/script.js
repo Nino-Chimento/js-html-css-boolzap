@@ -40,6 +40,19 @@ $(document).ready(function () {
         }
       }
     });
+    $(".cerca-utente").keyup(function () {
+        var datoRicerca = $(".cerca-utente").val();
+        var riga = $(".wrap-menu-utenti li");
+        for (var i = 0; i < riga.length; i++) {
+          var name = $(".wrap-menu-utenti").find("h4").eq(i).text();
+          if (name.includes(datoRicerca)) {
+            riga.eq(i).show();
+          }
+          else {
+            riga.eq(i).hide();
+          }
+        }
+    });
     $(".div-search i").click(function () {
       var datoRicerca = $(".cerca-utente").val();
       var riga = $(".wrap-menu-utenti li");
