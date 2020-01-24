@@ -81,7 +81,7 @@ img{
    right: 25px;
  }
 .cerca-utente {
-  width: 95%;
+  width: 100%;
   ;
 }
 /* /search */
@@ -99,7 +99,7 @@ img{
 
 .lista-utenti {
   list-style: none;
-  width: 90%;
+  width: 100%;
   height: calc(100% - 160px);
   margin: auto;
   background-color: white;
@@ -120,7 +120,16 @@ img{
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.1);
 }
-
+/* }grafica lista utente */
+.testo-lista-utente {
+  width: 40%;
+}
+.lista-utenti img {
+  padding-left: 5px;
+}
+.lista-utenti  p {
+  padding-right: 5px;
+}
 .opacity {
   position: absolute;
   width: 100%;

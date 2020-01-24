@@ -26,5 +26,5 @@ $(document).ready(function () {
       messaggioRicevuto.children("p").text("ok");
       $(".conversazione").append(messaggioRicevuto);
     }, 1000);
-    });
   });
+});
