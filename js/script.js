@@ -57,7 +57,7 @@ $(document).ready(function () {
 
     // cancellazione messaggi
     $(".fa-angle-down").click(function () {
-      $(this).next().toggleClass("display-none");
+      $(this).find("menu-cancellazione").toggleClass("display-none");
     });
     $(".delete").click(function () {
       $(this).parents(".contenitore-messaggio-inviato").remove();
