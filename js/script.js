@@ -29,7 +29,10 @@ $(document).ready(function () {
       if(event.which == 13 || event.keyCode == 13){
         var datoRicerca = $(".cerca-utente").val();
         var riga = $(".wrap-menu-utenti li");
-        console.log(riga.length);
+        for (var i = 0; i < riga.length; i++) {
+          var name = $(".wrap-menu-utenti").find("h4").eq(i).text();
+          console.log(name);
+        }
       }
     });
     // cancellazione messaggi
