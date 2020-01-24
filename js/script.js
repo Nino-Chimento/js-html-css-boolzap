@@ -27,7 +27,8 @@ $(document).ready(function () {
     });
     $(".cerca-utente").keypress(function () {
       if(event.which == 13 || event.keyCode == 13){
-        console.log("N");
+        var datoRicerca = $(".cerca-utente").val();
+        console.log(datoRicerca);
       }
     });
     // cancellazione messaggi
