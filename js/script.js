@@ -8,7 +8,7 @@ $(document).ready(function () {
         $("#invio").val("");
         $(".conversazione").append(nuovoElemento);
         setTimeout(function () {
-          var messaggioRicevuto = $(".messaggio-ricevuto").clone();
+          var messaggioRicevuto = $(".template .copia-ricevuto").clone();
           messaggioRicevuto.children("p").text("ok");
           $(".conversazione").append(messaggioRicevuto);
         }, 1000);
