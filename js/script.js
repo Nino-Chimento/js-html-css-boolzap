@@ -69,7 +69,8 @@ $(document).ready(function () {
       $(this).parents(".contenitore-messaggio-inviato").remove();
     })
     $(".wrap-menu-utenti li").click(function () {
-      console.log("N");
+      var posizione =$(this).attr("data-element");
+      console.log(posizione);
     });
 
   });
