@@ -33,11 +33,15 @@ $(document).ready(function () {
           var name = $(".wrap-menu-utenti").find("h4").eq(i).text();
           // console.log(name);
           if (name.includes(datoRicerca)) {
-            console.log("Nj");
+            riga.eq(i).show();
+          }
+          else {
+            riga.eq(i).hide();
           }
         }
       }
     });
+
     // cancellazione messaggi
     $(".fa-angle-down").click(function () {
       $(this).next().toggleClass("display-none");
