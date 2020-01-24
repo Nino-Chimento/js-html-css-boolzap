@@ -166,6 +166,7 @@ img{
   position: relative;
   flex-direction: column;
   overflow-y: scroll;
+  display: none;
 }
 .contenitore-messaggio-inviato {
   width: 90%;
@@ -242,4 +243,7 @@ img{
 }
 .display-none {
   display: none;
+}
+.active {
+  display: block;
 }
