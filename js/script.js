@@ -69,8 +69,10 @@ $(document).ready(function () {
       $(this).parents(".contenitore-messaggio-inviato").remove();
     })
     $(".wrap-menu-utenti li").click(function () {
-      var posizione =$(this).attr("data-element");
-      console.log(posizione);
+      var posizione =$(this).attr("data-element")-1;
+      var chatActive = $(".active");
+      chatActive.removeClass("active");
+      $(".conversazione").eq(posizione).addClass("active")
     });
 
   });
