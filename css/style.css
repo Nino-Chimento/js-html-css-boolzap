@@ -63,7 +63,7 @@ img{
 .notifiche-header-utenti i {
   color: white;
   font-size: 1.5em;
-  padding-left: 10px;
+  padding:0 10px;
 }
 
 /* /HEADER UTENTI */
@@ -153,8 +153,11 @@ img{
 }
 .icons-header-comversazioni i {
   color: lightgrey;
-  padding: 0 5px;
+  padding: 0 10px;
   font-size: 1.2em;
+}
+.intestazione-header img {
+  padding: 0 10px;
 }
 .conversazione {
   width: 98%;
@@ -176,6 +179,7 @@ img{
   background-color: #D5F9BA;
   border-radius: 10px;
   padding: 10px;
+  margin-top: 10px;
   position: relative;
   text-align: center;
 }
@@ -209,6 +213,7 @@ img{
   border-radius: 10px;
   width: 30%;
   margin-left:10%;
+  margin-top: 10px;
   text-align: center;
   padding: 10px;
 }
