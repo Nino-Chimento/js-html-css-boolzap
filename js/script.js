@@ -41,6 +41,20 @@ $(document).ready(function () {
         }
       }
     });
+    $(".div-search i").click(function () {
+      var datoRicerca = $(".cerca-utente").val();
+      var riga = $(".wrap-menu-utenti li");
+      for (var i = 0; i < riga.length; i++) {
+        var name = $(".wrap-menu-utenti").find("h4").eq(i).text();
+        // console.log(name);
+        if (name.includes(datoRicerca)) {
+          riga.eq(i).show();
+        }
+        else {
+          riga.eq(i).hide();
+        }
+      }
+    });
 
     // cancellazione messaggi
     $(".fa-angle-down").click(function () {
