@@ -25,6 +25,12 @@ $(document).ready(function () {
         $(".conversazione").append(messaggioRicevuto);
       }, 1000);
     });
+    $(".cerca-utente").keypress(function () {
+      if(event.which == 13 || event.keyCode == 13){
+        console.log("N");
+      }
+    });
+    // cancellazione messaggi
     $(".fa-angle-down").click(function () {
       $(this).next().toggleClass("display-none");
     });

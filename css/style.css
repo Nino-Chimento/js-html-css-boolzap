@@ -80,6 +80,9 @@ img{
    top:5px;
    right: 25px;
  }
+ .div-search i:hover{
+   cursor: pointer;
+ }
 .cerca-utente {
   width: 100%;
   ;
