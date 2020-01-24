@@ -3,7 +3,7 @@ $(document).ready(function () {
     if(event.which == 13 || event.keyCode == 13) {
         var testo = $("#invio").val();
         console.log(testo);
-        var nuovoElemento = $(".copia").clone();
+        var nuovoElemento = $(".template .copia").clone();
         nuovoElemento.find("p").text(testo);
         $("#invio").val("");
         $(".conversazione").append(nuovoElemento);
@@ -17,7 +17,7 @@ $(document).ready(function () {
   $(".fa-telegram-plane").click(function () {
     var testo = $("#invio").val();
     console.log(testo);
-    var nuovoElemento = $(".copia").clone();
+    var nuovoElemento = $(".template .copia").clone();
     nuovoElemento.find("p").text(testo);
     $(".conversazione").append(nuovoElemento);
     $("#invio").val("");
