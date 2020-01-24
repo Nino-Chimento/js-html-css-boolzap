@@ -31,7 +31,10 @@ $(document).ready(function () {
         var riga = $(".wrap-menu-utenti li");
         for (var i = 0; i < riga.length; i++) {
           var name = $(".wrap-menu-utenti").find("h4").eq(i).text();
-          console.log(name);
+          // console.log(name);
+          if (name.includes(datoRicerca)) {
+            console.log("Nj");
+          }
         }
       }
     });
