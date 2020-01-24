@@ -68,5 +68,8 @@ $(document).ready(function () {
     $(document).on("click",".delete",function () {
       $(this).parents(".contenitore-messaggio-inviato").remove();
     })
+    $(".wrap-menu-utenti li").click(function () {
+      console.log("N");
+    });
 
   });
