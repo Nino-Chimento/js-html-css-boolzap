@@ -86,10 +86,12 @@ $(document).ready(function () {
       var chatActive = $(".active");
       chatActive.removeClass("active");
       $(".conversazione").eq(posizione).addClass("active");
+      $(this).children("img").addClass("display-none")
     });
+    $("")
       $(".wrap-menu-utenti li").click(function () {
         var chat = $(this);
-        console.log(chat + "N");
+
 
         $("#invio").keypress(function () {
           if(event.which == 13 || event.keyCode == 13){
