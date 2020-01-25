@@ -90,6 +90,11 @@ $(document).ready(function () {
       $(".wrap-menu-utenti li").click(function () {
         var chat = $(this);
         console.log(chat + "N");
-        $(".lista-utenti").prepend(chat)
+
+        $("#invio").keypress(function () {
+          if(event.which == 13 || event.keyCode == 13){
+            $(".lista-utenti").prepend(chat);
+          }
+        })
       })
   });
