@@ -86,9 +86,12 @@ $(document).ready(function () {
       var chatActive = $(".active");
       chatActive.removeClass("active");
       $(".conversazione").eq(posizione).addClass("active");
-      $(this).children("img").addClass("display-none")
+      var chatImg = $(this).children("img");
+      var chatPush = chatImg.clone();
+      $(".intestazione-header img").remove();
+      $(".intestazione-header").prepend(chatPush);
     });
-    $("")
+
       $(".wrap-menu-utenti li").click(function () {
         var chat = $(this);
 
