@@ -87,5 +87,9 @@ $(document).ready(function () {
       chatActive.removeClass("active");
       $(".conversazione").eq(posizione).addClass("active");
     });
-
+      $(".wrap-menu-utenti li").click(function () {
+        var chat = $(this);
+        console.log(chat + "N");
+        $(".lista-utenti").prepend(chat)
+      })
   });
