@@ -6,6 +6,10 @@ $(document).ready(function () {
         nuovoElemento.find("p").text(testo);
         $("#invio").val("");
         $(".conversazione").append(nuovoElemento);
+        data = new Date();
+        ore = data.getHours();
+        minuti = data.getMinutes();
+        time = ore+":"+minuti:
         setTimeout(function () {
           var messaggioRicevuto = $(".template .copia-ricevuto").clone();
           messaggioRicevuto.children("p").text("ok");
