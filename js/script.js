@@ -88,8 +88,12 @@ $(document).ready(function () {
       $(".conversazione").eq(posizione).addClass("active");
       var chatImg = $(this).children("img");
       var chatPush = chatImg.clone();
+      var nome = $(this).find("h4");
+      var nomePush = nome.clone();
       $(".intestazione-header img").remove();
+      $(".testo-accanto-img h4").remove();
       $(".intestazione-header").prepend(chatPush);
+      $(".testo-accanto-img").prepend(nomePush);
     });
 
       $(".wrap-menu-utenti li").click(function () {
