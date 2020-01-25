@@ -21,14 +21,20 @@ $(document).ready(function () {
       }
     })
     $(".fa-telegram-plane").click(function () {
+      data = new Date();
+      ore = data.getHours();
+      minuti = data.getMinutes();
+      time = ore+":"+minuti;
       var testo = $("#invio").val();
       var nuovoElemento = $(".template .copia").clone();
       nuovoElemento.find("p").text(testo);
+      nuovoElemento.find("small").text(time);
       $(".conversazione").append(nuovoElemento);
       $("#invio").val("");
       setTimeout(function () {
-        var messaggioRicevuto = $(".messaggio-ricevuto").clone();
+        var messaggioRicevuto = $(".template .messaggio-ricevuto").clone();
         messaggioRicevuto.children("p").text("ok");
+        messaggioRicevuto.children("small").text(time);
         $(".conversazione").append(messaggioRicevuto);
       }, 1000);
     });
