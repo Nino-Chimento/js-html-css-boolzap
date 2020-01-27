@@ -32,13 +32,15 @@ $(document).ready(function () {
       var nuovoElemento = $(".template .copia").clone();
       nuovoElemento.find("p").text(testo);
       nuovoElemento.find("small").text(time);
-      $(".conversazione").append(nuovoElemento);
+      $(".conversazione.active").append(nuovoElemento);
       $("#invio").val("");
+      scrollMessage();
       setTimeout(function () {
         var messaggioRicevuto = $(".template .messaggio-ricevuto").clone();
         messaggioRicevuto.children("p").text("ok");
         messaggioRicevuto.children("small").text(time);
-        $(".conversazione").append(messaggioRicevuto);
+        $(".conversazione.active").append(messaggioRicevuto);
+        scrollMessage();
       }, 1000);
     });
     $(".cerca-utente").keypress(function () {
@@ -125,14 +127,14 @@ $(document).ready(function () {
         }
       })
     })
-    $(".scrittura-messaggi input").focus(function () {
-      $(".scrittura-messaggi .fa-microphone").toggleClass("display-none");
-      $(".scrittura-messaggi .fa-telegram-plane").toggleClass("display-none");
-    });
-    $(".scrittura-messaggi input").focusout(function () {
-      $(".scrittura-messaggi .fa-microphone").toggleClass("display-none");
-      $(".scrittura-messaggi .fa-telegram-plane").toggleClass("display-none");
-    })
+    // $(".scrittura-messaggi input").focus(function () {
+    //   $(".scrittura-messaggi .fa-microphone").toggleClass("display-none");
+    //   $(".scrittura-messaggi .fa-telegram-plane").toggleClass("display-none");
+    // });
+    // $(".scrittura-messaggi input").focusout(function () {
+    //   $(".scrittura-messaggi .fa-microphone").toggleClass("display-none");
+    //   $(".scrittura-messaggi .fa-telegram-plane").toggleClass("display-none");
+    // })
   });
 function scrollMessage() {
   var altezza =  $(".conversazione.active").height();
