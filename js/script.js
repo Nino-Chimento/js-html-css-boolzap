@@ -89,13 +89,16 @@ $(document).ready(function () {
     });
     $(".delete").click(function () {
       $(this).parents(".contenitore-messaggio-inviato").remove();
+      $(this).parents(".messaggio-ricevuto").remove();
     });
     $(document).on("click",".fa-angle-down",function () {
       $(this).next().toggleClass("display-none");
     });
     $(document).on("click",".delete",function () {
       $(this).parents(".contenitore-messaggio-inviato").remove();
+      $(this).parents(".messaggio-ricevuto").remove();
     })
+    // caht attiva
     $(".wrap-menu-utenti li").click(function () {
       var posizione =$(this).attr("data-element")-1;
       var chatActive = $(".active");
