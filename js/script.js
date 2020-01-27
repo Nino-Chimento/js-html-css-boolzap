@@ -11,7 +11,9 @@ $(document).ready(function () {
         nuovoElemento.find("small").text(time);
         $("#invio").val("");
         $(".conversazione").append(nuovoElemento);
-
+        var altezza =  $(".active div").last().height();
+        $(".conversazione").scrollTop(altezza);
+        console.log(altezza);
         setTimeout(function () {
           var messaggioRicevuto = $(".template .copia-ricevuto").clone();
           messaggioRicevuto.children("p").text("ok");
