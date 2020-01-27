@@ -123,6 +123,8 @@ $(document).ready(function () {
     })
     $(".scrittura-messaggi input").focus(function () {
       console.log("N");
+      $(".scrittura-messaggi .fa-microphone").toggleClass("display-none");
+      $(".scrittura-messaggi .fa-telegram-plane").toggleClass("display-none");
     })
   });
 function scrollMessage() {
