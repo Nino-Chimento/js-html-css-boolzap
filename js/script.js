@@ -11,9 +11,9 @@ $(document).ready(function () {
         nuovoElemento.find("small").text(time);
         $("#invio").val("");
         $(".conversazione").append(nuovoElemento);
-        var altezza =  $(".active div").last().height();
-        $(".conversazione").scrollTop(altezza);
-        console.log(altezza);
+        // var altezza =  $(".active").last().height();
+        // $(".conversazione").scrollTop(altezza);
+        scrollMessage();
         setTimeout(function () {
           var messaggioRicevuto = $(".template .copia-ricevuto").clone();
           messaggioRicevuto.children("p").text("ok");
@@ -122,3 +122,7 @@ $(document).ready(function () {
       })
     })
   });
+function scrollMessage() {
+  var altezza =  $(".active").last().height();
+  $(".conversazione").scrollTop(altezza);
+}
