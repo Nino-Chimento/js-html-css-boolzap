@@ -10,7 +10,7 @@ $(document).ready(function () {
         nuovoElemento.find("p").text(testo);
         nuovoElemento.find("small").text(time);
         $("#invio").val("");
-        $(".conversazione").append(nuovoElemento);
+        $(".conversazione.active").append(nuovoElemento);
         // var altezza =  $(".active").last().height();
         // $(".conversazione").scrollTop(altezza);
         scrollMessage();
@@ -18,7 +18,8 @@ $(document).ready(function () {
           var messaggioRicevuto = $(".template .copia-ricevuto").clone();
           messaggioRicevuto.children("p").text("ok");
           messaggioRicevuto.children("small").text(time);
-          $(".conversazione").append(messaggioRicevuto);
+          $(".conversazione.active").append(messaggioRicevuto);
+          scrollMessage();
         }, 1000);
       }
     })
@@ -134,6 +135,6 @@ $(document).ready(function () {
     })
   });
 function scrollMessage() {
-  var altezza =  $(".active").height();
-  $(".conversazione").scrollTop(altezza);
+  var altezza =  $(".conversazione.active").height();
+  $(".contenitore-messaggi").scrollTop(altezza);
 }
