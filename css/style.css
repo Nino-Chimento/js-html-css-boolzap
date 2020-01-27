@@ -196,7 +196,12 @@ img{
 .messaggio-inviato:hover .fa-angle-down {
   display: block;
 }
-
+.messaggio-ricevuto:hover {
+  cursor: pointer;
+}
+.messaggio-ricevuto:hover .fa-angle-down {
+  display: block;
+}
 .menu-cancellazione {
   position: absolute;
   top: 10px;
@@ -218,6 +223,7 @@ img{
   margin-top: 10px;
   text-align: center;
   padding: 10px;
+  position: relative;
 }
 .template {
   display: none
