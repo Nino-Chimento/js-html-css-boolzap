@@ -127,14 +127,17 @@ $(document).ready(function () {
         }
       })
     })
-    // $(".scrittura-messaggi input").focus(function () {
-    //   $(".scrittura-messaggi .fa-microphone").toggleClass("display-none");
-    //   $(".scrittura-messaggi .fa-telegram-plane").toggleClass("display-none");
-    // });
-    // $(".scrittura-messaggi input").focusout(function () {
-    //   $(".scrittura-messaggi .fa-microphone").toggleClass("display-none");
-    //   $(".scrittura-messaggi .fa-telegram-plane").toggleClass("display-none");
-    // })
+    $(".scrittura-messaggi input").focus(function () {
+      $(".scrittura-messaggi .fa-microphone").toggleClass("display-none");
+      $(".scrittura-messaggi .fa-telegram-plane").toggleClass("display-none");
+    });
+    $(".scrittura-messaggi input").focusout(function () {
+      setTimeout(function () {
+        $(".scrittura-messaggi .fa-microphone").toggleClass("display-none");
+        $(".scrittura-messaggi .fa-telegram-plane").toggleClass("display-none");
+      }, 100);
+
+    })
   });
 function scrollMessage() {
   var altezza =  $(".conversazione.active").height();
