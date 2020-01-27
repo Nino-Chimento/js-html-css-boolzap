@@ -121,8 +121,11 @@ $(document).ready(function () {
         }
       })
     })
+    $(".scrittura-messaggi input").focus(function () {
+      console.log("N");
+    })
   });
 function scrollMessage() {
-  var altezza =  $(".active").last().height();
+  var altezza =  $(".active").height();
   $(".conversazione").scrollTop(altezza);
 }
