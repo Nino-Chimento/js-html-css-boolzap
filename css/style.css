@@ -70,21 +70,25 @@ img{
 /* search */
 .div-search {
   height: 20px;
-  width: 100%;
+  width: 95%;
   position: relative;
   margin: 5px 5px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+.contenitore-lente {
+  background-color: white;
 }
  .div-search i {
-   position: absolute;
    color: lightgrey;
-   top:5px;
-   right: 25px;
  }
  .div-search i:hover{
    cursor: pointer;
  }
 .cerca-utente {
   width: 100%;
+  border: 1px solid white;
   ;
 }
 /* /search */

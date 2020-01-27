@@ -135,7 +135,7 @@ $(document).ready(function () {
       setTimeout(function () {
         $(".scrittura-messaggi .fa-microphone").toggleClass("display-none");
         $(".scrittura-messaggi .fa-telegram-plane").toggleClass("display-none");
-      }, 100);
+      }, 200);
 
     })
   });
