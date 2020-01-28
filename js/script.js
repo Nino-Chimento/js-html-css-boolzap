@@ -6,21 +6,22 @@ $(document).ready(function () {
       minuti = data.getMinutes();
       time = ore+":"+minuti;
         var testo = $("#invio").val();
-        var nuovoElemento = $(".template .copia").clone();
-        nuovoElemento.find("p").text(testo);
-        nuovoElemento.find("small").text(time);
-        $("#invio").val("");
-        $(".conversazione.active").append(nuovoElemento);
-        // var altezza =  $(".active").last().height();
-        // $(".conversazione").scrollTop(altezza);
-        scrollMessage();
-        setTimeout(function () {
-          var messaggioRicevuto = $(".template .copia-ricevuto").clone();
-          messaggioRicevuto.children("p").text("ok");
-          messaggioRicevuto.children("small").text(time);
-          $(".conversazione.active").append(messaggioRicevuto);
+        if (testo.length != 0) {
+          var nuovoElemento = $(".template .copia").clone();
+          nuovoElemento.find("p").text(testo);
+          nuovoElemento.find("small").text(time);
+          $("#invio").val("");
+          $(".conversazione.active").append(nuovoElemento);
           scrollMessage();
-        }, 1000);
+          setTimeout(function () {
+            var messaggioRicevuto = $(".template .copia-ricevuto").clone();
+            messaggioRicevuto.children("p").text("ok");
+            messaggioRicevuto.children("small").text(time);
+            $(".conversazione.active").append(messaggioRicevuto);
+            scrollMessage();
+          }, 1000);
+
+        }
       }
     })
     $(".fa-telegram-plane").click(function () {
