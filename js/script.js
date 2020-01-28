@@ -1,49 +1,12 @@
 $(document).ready(function () {
-  var listaFrasi = [
-    "ciao dove ci vediamo?",
-    "tutto bene grazie",
-    "ci sentiamo dopo",
-    "a dopo",
-    "ok perfetto"
-  ]
   $("#invio").keypress(function () {
     if(event.which == 13 || event.keyCode == 13) {
-        var testo = $("#invio").val();
-        if (testo.length != 0) {
-          var nuovoElemento = $(".template .copia").clone();
-          nuovoElemento.find("p").text(testo);
-          nuovoElemento.find("small").text(getTime());
-          $("#invio").val("");
-          $(".conversazione.active").append(nuovoElemento);
-          scrollMessage();
-          setTimeout(function () {
-            var messaggioRicevuto = $(".template .copia-ricevuto").clone();
-            messaggioRicevuto.children("p").text(listaFrasi[ getRndInteger(1, 5)]);
-            messaggioRicevuto.children("small").text(getTime());
-            $(".conversazione.active").append(messaggioRicevuto);
-            scrollMessage();
-          }, 1000);
-
-        }
+        invioMessaggio();
       }
     })
+
     $(".fa-telegram-plane").click(function () {
-      var testo = $("#invio").val();
-      if (testo != 0) {
-        var nuovoElemento = $(".template .copia").clone();
-        nuovoElemento.find("p").text(testo);
-        nuovoElemento.find("small").text(getTime());
-        $(".conversazione.active").append(nuovoElemento);
-        $("#invio").val("");
-        scrollMessage();
-        setTimeout(function () {
-          var messaggioRicevuto = $(".template .messaggio-ricevuto").clone();
-          messaggioRicevuto.children("p").text(listaFrasi[ getRndInteger(1, 5)]);
-          messaggioRicevuto.children("small").text(getTime());
-          $(".conversazione.active").append(messaggioRicevuto);
-          scrollMessage();
-        }, 1000);
-      }
+      invioMessaggio();
     });
 
     // cerca utente
@@ -132,5 +95,31 @@ function cercaUtente() {
       riga.eq(i).hide();
     }
   }
+}
 
+function invioMessaggio() {
+  var listaFrasi = [
+    "ciao dove ci vediamo?",
+    "tutto bene grazie",
+    "ci sentiamo dopo",
+    "a dopo",
+    "ok perfetto"
+  ]
+
+  var testo = $("#invio").val();
+  if (testo.length != 0) {
+    var nuovoElemento = $(".template .copia").clone();
+    nuovoElemento.find("p").text(testo);
+    nuovoElemento.find("small").text(getTime());
+    $("#invio").val("");
+    $(".conversazione.active").append(nuovoElemento);
+    scrollMessage();
+    setTimeout(function () {
+      var messaggioRicevuto = $(".template .copia-ricevuto").clone();
+      messaggioRicevuto.children("p").text(listaFrasi[ getRndInteger(1, 5)]);
+      messaggioRicevuto.children("small").text(getTime());
+      $(".conversazione.active").append(messaggioRicevuto);
+      scrollMessage();
+    }, 1000);
+  }
 }
