@@ -1,4 +1,11 @@
 $(document).ready(function () {
+  var listaFrasi = [
+    "ciao dove ci vediamo?",
+    "tutto bene grazie",
+    "ci sentiamo dopo",
+    "a dopo",
+    "ok perfetto"
+  ]
   $("#invio").keypress(function () {
     if(event.which == 13 || event.keyCode == 13) {
       data = new Date();
@@ -15,7 +22,7 @@ $(document).ready(function () {
           scrollMessage();
           setTimeout(function () {
             var messaggioRicevuto = $(".template .copia-ricevuto").clone();
-            messaggioRicevuto.children("p").text("ok");
+            messaggioRicevuto.children("p").text(listaFrasi[ getRndInteger(1, 5)]);
             messaggioRicevuto.children("small").text(time);
             $(".conversazione.active").append(messaggioRicevuto);
             scrollMessage();
@@ -39,7 +46,7 @@ $(document).ready(function () {
         scrollMessage();
         setTimeout(function () {
           var messaggioRicevuto = $(".template .messaggio-ricevuto").clone();
-          messaggioRicevuto.children("p").text("ok");
+          messaggioRicevuto.children("p").text(listaFrasi[ getRndInteger(1, 5)]);
           messaggioRicevuto.children("small").text(time);
           $(".conversazione.active").append(messaggioRicevuto);
           scrollMessage();
@@ -130,4 +137,7 @@ $(document).ready(function () {
   function scrollMessage() {
     var altezza =  $(".conversazione.active").height();
     $(".contenitore-messaggi").scrollTop(altezza);
+  }
+  function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
   }
