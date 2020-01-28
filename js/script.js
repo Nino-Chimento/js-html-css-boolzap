@@ -59,11 +59,10 @@ $(document).ready(function () {
       }
     });
     $(".div-search i").click(function () {
-      var datoRicerca = $(".cerca-utente").val();
+      var datoRicerca = $(".cerca-utente").val().toLowerCase();
       var riga = $(".wrap-menu-utenti li");
       for (var i = 0; i < riga.length; i++) {
-        var name = $(".wrap-menu-utenti").find("h4").eq(i).text();
-        // console.log(name);
+        var name = $(".wrap-menu-utenti").find("h4").eq(i).text().toLowerCase();
         if (name.includes(datoRicerca)) {
           riga.eq(i).show();
         }
