@@ -77,7 +77,9 @@ $(document).ready(function () {
     $(document).on("click",".fa-angle-down",function () {
       $(this).next().toggleClass("display-none");
       $(this).parents(".contenitore-messaggio-inviato").siblings(".contenitore-messaggio-inviato").find(".menu-cancellazione").addClass("display-none");
-        $(this).parents(".contenitore-messaggio-inviato").siblings(".messaggio-ricevuto").find(".menu-cancellazione").addClass("display-none");
+      $(this).parents(".contenitore-messaggio-inviato").siblings(".messaggio-ricevuto").find(".menu-cancellazione").addClass("display-none");
+      $(this).parents(".messaggio-ricevuto").siblings(".contenitore-messaggio-inviato").find(".menu-cancellazione").addClass("display-none");
+      $(this).parents(".messaggio-ricevuto").siblings(".messaggio-ricevuto").find(".menu-cancellazione").addClass("display-none");
     });
     $(document).on("click",".delete",function () {
       $(this).parents(".contenitore-messaggio-inviato").remove();
