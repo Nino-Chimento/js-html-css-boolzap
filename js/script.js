@@ -87,13 +87,7 @@ $(document).ready(function () {
     });
 
     // cancellazione messaggi
-    $(".fa-angle-down").click(function () {
-      $(this).find("menu-cancellazione").toggleClass("display-none");
-    });
-    $(".delete").click(function () {
-      $(this).parents(".contenitore-messaggio-inviato").remove();
-      $(this).parents(".messaggio-ricevuto").remove();
-    });
+    
     $(document).on("click",".fa-angle-down",function () {
       $(this).next().toggleClass("display-none");
     });
