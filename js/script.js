@@ -8,22 +8,18 @@ $(document).ready(function () {
   ]
   $("#invio").keypress(function () {
     if(event.which == 13 || event.keyCode == 13) {
-      data = new Date();
-      ore = data.getHours();
-      minuti = data.getMinutes();
-      time = ore+":"+minuti;
         var testo = $("#invio").val();
         if (testo.length != 0) {
           var nuovoElemento = $(".template .copia").clone();
           nuovoElemento.find("p").text(testo);
-          nuovoElemento.find("small").text(time);
+          nuovoElemento.find("small").text(getTime());
           $("#invio").val("");
           $(".conversazione.active").append(nuovoElemento);
           scrollMessage();
           setTimeout(function () {
             var messaggioRicevuto = $(".template .copia-ricevuto").clone();
             messaggioRicevuto.children("p").text(listaFrasi[ getRndInteger(1, 5)]);
-            messaggioRicevuto.children("small").text(time);
+            messaggioRicevuto.children("small").text(getTime());
             $(".conversazione.active").append(messaggioRicevuto);
             scrollMessage();
           }, 1000);
@@ -40,14 +36,14 @@ $(document).ready(function () {
       if (testo != 0) {
         var nuovoElemento = $(".template .copia").clone();
         nuovoElemento.find("p").text(testo);
-        nuovoElemento.find("small").text(time);
+        nuovoElemento.find("small").text(getTime());
         $(".conversazione.active").append(nuovoElemento);
         $("#invio").val("");
         scrollMessage();
         setTimeout(function () {
           var messaggioRicevuto = $(".template .messaggio-ricevuto").clone();
           messaggioRicevuto.children("p").text(listaFrasi[ getRndInteger(1, 5)]);
-          messaggioRicevuto.children("small").text(time);
+          messaggioRicevuto.children("small").text(getTime());
           $(".conversazione.active").append(messaggioRicevuto);
           scrollMessage();
         }, 1000);
@@ -140,4 +136,11 @@ $(document).ready(function () {
   }
   function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
+  }
+  function getTime() {
+    data = new Date();
+    ore = data.getHours();
+    minuti = data.getMinutes();
+    time = ore+":"+minuti;
+    return time
   }
