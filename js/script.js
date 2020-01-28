@@ -30,19 +30,22 @@ $(document).ready(function () {
       minuti = data.getMinutes();
       time = ore+":"+minuti;
       var testo = $("#invio").val();
-      var nuovoElemento = $(".template .copia").clone();
-      nuovoElemento.find("p").text(testo);
-      nuovoElemento.find("small").text(time);
-      $(".conversazione.active").append(nuovoElemento);
-      $("#invio").val("");
-      scrollMessage();
-      setTimeout(function () {
-        var messaggioRicevuto = $(".template .messaggio-ricevuto").clone();
-        messaggioRicevuto.children("p").text("ok");
-        messaggioRicevuto.children("small").text(time);
-        $(".conversazione.active").append(messaggioRicevuto);
+      if (testo != 0) {
+        var nuovoElemento = $(".template .copia").clone();
+        nuovoElemento.find("p").text(testo);
+        nuovoElemento.find("small").text(time);
+        $(".conversazione.active").append(nuovoElemento);
+        $("#invio").val("");
         scrollMessage();
-      }, 1000);
+        setTimeout(function () {
+          var messaggioRicevuto = $(".template .messaggio-ricevuto").clone();
+          messaggioRicevuto.children("p").text("ok");
+          messaggioRicevuto.children("small").text(time);
+          $(".conversazione.active").append(messaggioRicevuto);
+          scrollMessage();
+        }, 1000);
+
+      }
     });
     // cerca utente
 
