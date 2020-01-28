@@ -44,9 +44,9 @@ $(document).ready(function () {
           $(".conversazione.active").append(messaggioRicevuto);
           scrollMessage();
         }, 1000);
-
       }
     });
+
     // cerca utente
 
     $(".cerca-utente").keyup(function () {
@@ -107,14 +107,13 @@ $(document).ready(function () {
 
     $(".wrap-menu-utenti li").click(function () {
       var chat = $(this);
-
-
       $("#invio").keypress(function () {
         if(event.which == 13 || event.keyCode == 13){
           $(".lista-utenti").prepend(chat);
         }
       })
     })
+    // cambio icona
     $(".scrittura-messaggi input").focus(function () {
       $(".scrittura-messaggi .fa-microphone").toggleClass("display-none");
       $(".scrittura-messaggi .fa-telegram-plane").toggleClass("display-none");
@@ -127,7 +126,8 @@ $(document).ready(function () {
 
     })
   });
-function scrollMessage() {
-  var altezza =  $(".conversazione.active").height();
-  $(".contenitore-messaggi").scrollTop(altezza);
-}
+  // funzione
+  function scrollMessage() {
+    var altezza =  $(".conversazione.active").height();
+    $(".contenitore-messaggi").scrollTop(altezza);
+  }
