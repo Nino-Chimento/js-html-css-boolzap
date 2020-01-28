@@ -87,9 +87,10 @@ $(document).ready(function () {
     });
 
     // cancellazione messaggi
-    
+
     $(document).on("click",".fa-angle-down",function () {
       $(this).next().toggleClass("display-none");
+      $(this).parents(".contenitore-messaggio-inviato").siblings(".contenitore-messaggio-inviato").find(".menu-cancellazione").addClass("display-none")
     });
     $(document).on("click",".delete",function () {
       $(this).parents(".contenitore-messaggio-inviato").remove();
