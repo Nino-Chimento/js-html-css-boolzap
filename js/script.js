@@ -28,10 +28,6 @@ $(document).ready(function () {
       }
     })
     $(".fa-telegram-plane").click(function () {
-      data = new Date();
-      ore = data.getHours();
-      minuti = data.getMinutes();
-      time = ore+":"+minuti;
       var testo = $("#invio").val();
       if (testo != 0) {
         var nuovoElemento = $(".template .copia").clone();
