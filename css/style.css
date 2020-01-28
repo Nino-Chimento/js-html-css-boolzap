@@ -249,7 +249,8 @@ img{
   height: 80px;
 }
 .scrittura-messaggi  input {
-  border: 2px solid #8EDAFC;
+  border: 1px solid #8EDAFC;
+  border-radius: 8px;
   width: 80%;
   height: 80%;
 }
@@ -268,7 +269,6 @@ img{
   display: block;
 }
 small {
-  margin: padding;
   text-align: right;
   font-size: 0.6em;
   display: block;
