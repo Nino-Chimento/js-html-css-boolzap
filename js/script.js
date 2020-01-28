@@ -49,30 +49,10 @@ $(document).ready(function () {
     // cerca utente
 
     $(".cerca-utente").keyup(function () {
-      var datoRicerca = $(".cerca-utente").val().toLowerCase();
-      var riga = $(".wrap-menu-utenti li");
-      for (var i = 0; i < riga.length; i++) {
-        var name = $(".wrap-menu-utenti").find("h4").eq(i).text().toLowerCase();
-        if (name.includes(datoRicerca)) {
-          riga.eq(i).show();
-        }
-        else {
-          riga.eq(i).hide();
-        }
-      }
+      cercaUtente();
     });
     $(".div-search i").click(function () {
-      var datoRicerca = $(".cerca-utente").val().toLowerCase();
-      var riga = $(".wrap-menu-utenti li");
-      for (var i = 0; i < riga.length; i++) {
-        var name = $(".wrap-menu-utenti").find("h4").eq(i).text().toLowerCase();
-        if (name.includes(datoRicerca)) {
-          riga.eq(i).show();
-        }
-        else {
-          riga.eq(i).hide();
-        }
-      }
+      cercaUtente();
     });
 
     // cancellazione messaggi
@@ -140,3 +120,17 @@ $(document).ready(function () {
     time = ore+":"+minuti;
     return time
   }
+function cercaUtente() {
+  var datoRicerca = $(".cerca-utente").val().toLowerCase();
+  var riga = $(".wrap-menu-utenti li");
+  for (var i = 0; i < riga.length; i++) {
+    var name = $(".wrap-menu-utenti").find("h4").eq(i).text().toLowerCase();
+    if (name.includes(datoRicerca)) {
+      riga.eq(i).show();
+    }
+    else {
+      riga.eq(i).hide();
+    }
+  }
+
+}
